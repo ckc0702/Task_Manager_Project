@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-white bg-dark">
+        <div><a href="/homepage" class="text-white">Little Task Manager</a></div>
+            
+            <ul class="navbar-nav navbar-collapse justify-content-center">
+                <li><a *ngIf=" basicAuthenticationService.isUserLoggedIn()" routerLink="/homepage" class="nav-link" >Home</a></li>
+                <li><a *ngIf=" basicAuthenticationService.isUserLoggedIn()" routerLink="/todo" class="nav-link">Todo</a></li>
+            </ul>
+
+            <ul class="navbar-nav navbar-collapse justify-content-end">
+                <li><a *ngIf=" !basicAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li> 
+                <li><a *ngIf=" basicAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+                <li><a *ngIf=" !basicAuthenticationService.isUserLoggedIn()" routerLink="/register" class="nav-link">Sign Up</a></li>
+            </ul>
+            
+    </nav>
+</header>
